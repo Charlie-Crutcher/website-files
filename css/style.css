@@ -1,0 +1,237 @@
+/*===== 1: FONT =====*/
+    /* Font Face is used to import a custom font (College Condensed) from the 'font' local folder. */
+    /* This font will be the sole font in use throughout the website. */
+
+    @font-face {
+        font-family: "College";
+        src: url(font/College.ttf);
+    }
+
+/*===== 2: HTML =====*/
+    /* Here the margin for the entire webpage is set as 0%, as well as the height being declared as 100% of the viewer heigh (vh). */
+    /* The html body is also given a black background and it's height and margin are also declared. */
+
+    html {
+        height: 100vh;
+        margin: 0%;
+    }
+    html, body {
+        background-color: black;
+        min-height: 100vh;
+        margin: 0%;
+    }
+
+/*===== 3: GRIDS & CONTAINERS =====*/
+    /* As this website will be made up of grids, several grid containers have been made. */
+    /* The 'maincontainer' grids are the containers of each entire web page. This means all sub-grids will be contained within this main grid. */
+
+    .grid-maincontainer-index{
+        display: grid;
+        grid-template-rows: 1 1 1 1;
+    }
+
+    .grid-maincontainer-products{
+        display: grid;
+        grid-template-rows: 1 1 1 1 1 1 1 1 1;
+    }
+    
+    .grid-maincontainer-productpage {
+        display: grid;
+        grid-template-rows: 1 1;
+        place-items: center;
+        text-align: center;
+    }
+
+    .grid-titlebox {
+        background-color: white;
+        font-family: "College", sans-serif;
+        text-align: left;
+
+        padding-top: 2%;
+    }
+
+    /* The 'titlebox' will contain the website name at the top of the screen. This will be used on all pages. */
+
+    .grid-titlebox {
+        background-color: white;
+        font-family: "College", sans-serif;
+        text-align: left;
+
+        padding-top: 2%;
+    }
+
+    /* The 'navigationbar' serves as the main navigation bar at the top of every page of the website. */
+    /* This will be made using a grid and five columns; one for each page of the website. */
+
+    .grid-navigationbar {
+        background-color: white;
+        font-family: "College", sans-serif;
+        text-align: center;
+
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 5%;
+      }
+
+    /* The 'bottomnavigation' serves as the 'previous' and 'next' page options at the bottom of the 'products'. */
+    .grid-bottomnavigation{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        padding-top: 2.5%;
+        padding-bottom: 5%;
+    }
+
+    /* The 'footer' acts as the footer for all pages of the website. */
+    .footer{
+        height: 20vh;
+        width: 100%;
+        background-color: #4E4E50;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+
+/*===== 3.1: Index Exclusive Containers =====*/
+    /* The index-background is a grid container used exclusivly on the index page. */
+
+    .grid-index-background{
+    padding-top: 20vh;
+    background-color: black;
+    }
+
+/*===== 3.2: Product Exclusive Containers =====*/
+    /* The products-products grid is made to display two products from left to right. */
+    .grid-products-products{
+        display: grid;
+        place-items: center;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        background-color: black;
+    }
+
+    /* This grid provides a place for the product's description on the productpage. */
+    .grid-productdescription{
+        display: grid;
+        place-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        background-color: black;
+    }
+
+    /* The products-pagetitle grid contains the Product's subheading. */
+    .grid-products-pagetitle{
+        text-align: center;
+        font-family: "College", sans-serif;
+    }
+
+    /* The productdesc gives the name of the product. This should be placed below the 'products-products' gridbox. */
+    .grid-products-productdesc{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        font-family: "College", sans-serif;
+    }
+
+/*===== 4: Styling =====*/
+    /* The pagetitle styling sets the font, alignment and padding of the title at the top of each page. */
+    #pagetitle {
+        text-align: left;
+        font-size: 6vw;
+        font-size: 6vh;
+        padding-left: 5%;
+        padding-top: 2%;
+    }
+
+    /* The producttile styling assigns the colour and size to the subheading of each 'products' page. */
+    #producttitle {
+        color: white;
+        font-size: 4vw;
+        font-size: 4vh;
+    }
+
+    /* Here the different html headings and links (a) tags are styled with custom font families and sizes.*/
+    h1 {
+        font-family: "College", sans-serif;
+        font-size: 64px;
+    }
+
+    h2 {
+        font-family: "College", sans-serif;
+        font-size: 3vw;
+        font-size: 3vh;
+    }
+
+    a {
+        font-family: "College", sans-serif;
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    /* The a tag's hover function is styled here to transform by 1.5x when one the user hovers over one of the navigation bar's options. */
+    p {
+        font-family: "College", sans-serif;
+        color: white;
+        font-size: 24px;
+    }
+    a:hover {
+        
+        color: black;
+        transform: scale(1.5);
+    }
+    /* The footer's and product's a tags are styled different however below. */
+    #footer_a:hover {
+        transform: none;
+    }
+    #productid {
+        transform: none;
+    }
+
+    /* This will contain the 'next' and 'previous' page a tag styles. */
+    #nav_nextpage {
+        color: white;
+        text-align: right;
+        padding-right: 10%;
+        transform: none;
+    }
+    #nav_nextpage:hover {
+        text-align: right;
+        padding-right: 10%;
+        transform: scale(1.1);
+    }
+    #nav_prevpage {
+        color: white;
+        text-align: left;
+        padding-left: 10%;
+        transform: none;
+    }
+    #nav_prevpage:hover {
+        text-align: left;
+        padding-left: 10%;
+        transform: scale(1.1);
+    }
+    /* A square shape is styled for a div. This will be used as a background for product images on product pages. */
+    .square {
+        aspect-ratio: 1/1;
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        object-fit: cover;
+    }
+    /* Square made specifically for product page. */
+    .square-product {
+        aspect-ratio: 1/1;
+        height: 85%;
+        width: 40%;
+        background-color: white;
+        object-fit: cover;
+    }
+
+/* This concludes the css file.
